@@ -19,12 +19,8 @@
                                 </h2>
                             </div>
                             <div class="card-body">
-                                <form id="formDescargarCarnet" onSubmit="change" method="GET" ">
+                                <form action="{{ route('consultar-cita') }}" method="GET" >
                                     @csrf
-                                    <div class="form-group row">
-                                        <label class="col-form-label text-sm-right font-weight-bold text-dark">Identificacion</label>
-                                        <input type="text" class="form-control  cajasTexto" value="" placeholder="Ingrese la identificacion"  id="usuario"  name="identificacion" tabindex="-1" required>
-                                    </div>
                                     <div class="form-group row pt-4">
                                         <label class="col-form-label text-sm-right font-weight-bold text-dark">Identificador de tu mascota</label>
                                         <input type="text" class="form-control  cajasTexto" placeholder="Ingrese el código" required  id="codigo" name="codigo" tabindex="-1">
@@ -36,7 +32,7 @@
                                     @endif
                                     <div class="form-group row pt-3">
                                         <div class="col-lg-4 col-sm-4 col-xs-4 offset-lg-4 offset-sm-5 offset-xs-4 text-center">
-                                            <button   id="botonVerificar" type="submit" onclick="lsRememberMe()" class="btn btn-success boton ">consultar </button>
+                                            <button   id="botonVerificar" type="submit"  class="btn btn-success  ">consultar </button>
                                         </div>
                                     </div>
                                 </form>

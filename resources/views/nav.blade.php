@@ -42,7 +42,7 @@
                 <a class="nav-link" href="{{route('inicio')}}">Inicio </a>
             </li>
             <li class="nav-item col-7">
-                <a class="nav-link" href="{{route('consultar')}}">Consultar Cita</a>
+                <a class="nav-link" href="{{route('cita.consultas')}}">Consultar Cita</a>
             </li>
             <li class="nav-item col-8">
                 <a class="nav-link btn btn-success text-light" href="{{route('agenda.registro')}}">Agendar Cita</a>

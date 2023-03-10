@@ -11,4 +11,12 @@ Route::group(['prefix' => '/cita', 'as' => 'cita.'], function () {
 
     Route::get('/', [CitaController::class, 'show'])
     ->name('ver');
+
+    Route::get('consultas', function () {
+        return view('consultar-cita'); 
+    })->name('consultas');
+    
+    
+    Route::get('/consultar-cita', [CitaController::class, 'consultarCita'])
+    ->name('consultar-cita');
 });

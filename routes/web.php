@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LoginController;
 
 include 'agendas/agenda.php';
 include 'cita.php';
@@ -10,10 +10,6 @@ Route::get('/', function () {
     return view('welcome'); 
 })->name('inicio');
 
-
-Route::get('consultar', function () {
-    return view('consultar-cita'); 
-})->name('consultar');
 
 
 Route::get('administracion', function () {
