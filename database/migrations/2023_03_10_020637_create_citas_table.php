@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('citas', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('star');
+            $table->time('hora');
             $table->string('title');
             $table->integer('mascota_id');
             $table->integer('cliente_id');

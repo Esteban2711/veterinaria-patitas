@@ -63,6 +63,7 @@ class CitaController extends Controller
                 if ($mascota) {
                     $cita = Cita::create([
                         'start'=> $request['start'],
+                        'hora'=> $request['hora'],
                         'title' =>  $cliente->nombre_completo.' '.$cliente->apellido_completo.' '.$mascota->nombre,
                         'mascota_id' => $mascota->id,
                         'cliente_id' => $cliente->id

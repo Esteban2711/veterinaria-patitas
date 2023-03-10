@@ -16,10 +16,10 @@ Route::get('consultar', function () {
 })->name('consultar');
 
 
-Route::get('iniciar-sesion', function () {
-    return view('iniciar-sesion'); 
-})->name('iniciarSesion');
-
 Route::get('administracion', function () {
     return view('administracion'); 
 })->name('administracion');
+
+
+Route::get('iniciar-sesion',[LoginController::class, 'verLogin'])->name('iniciarSesion');
+Route::post('iniciar-sesion', [LoginController::class, 'login'])->name('loginSubmit');

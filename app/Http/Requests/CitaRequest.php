@@ -26,6 +26,14 @@ class CitaRequest extends FormRequest
             'title' => 'required',
             'mascota_id' => 'required',
             'cliente_id' => 'required',
+            'hora' => [
+                'required',
+                'date_format:H:i',
+                Rule::unique('citas')->where(function ($query) use ($request) {
+                    return $query->where('start', $request->start)
+                        ->where('hora', $request->hora);
+                }),
+            ],
         ];
     }
 }
