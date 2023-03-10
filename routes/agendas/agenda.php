@@ -7,6 +7,7 @@ use App\Http\Controllers\AgendaController;
 Route::group(['prefix' => '/agenda', 'as' => 'agenda.'], function () {
 
     Route::get('/', [AgendaController::class, 'registro'])
-      ->name('registro');
+    ->name('registro');
 
+    
 });
