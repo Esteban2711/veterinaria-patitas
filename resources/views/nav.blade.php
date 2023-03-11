@@ -38,16 +38,13 @@
     </button>
     <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav text-center ">
-            <li class="nav-item active col-3">
+            <li class="nav-item active col-6">
                 <a class="nav-link" href="{{route('inicio')}}">Inicio </a>
             </li>
-            <li class="nav-item col-7">
-                <a class="nav-link" href="{{route('consultar')}}">Consultar Cita</a>
-            </li>
-            <li class="nav-item col-8">
+            <li class="nav-item col-10">
                 <a class="nav-link btn btn-success text-light" href="{{route('agenda.registro')}}">Agendar Cita</a>
             </li>
-            <li class="nav-item col-2 ">
+            <li class="nav-item col-4 ">
                 <a class="nav-link text-dark " href="{{route('iniciarSesion')}}"><i class="fa-lg fa fa-user"></i></a>
             </li>
         </ul>

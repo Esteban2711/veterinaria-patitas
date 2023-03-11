@@ -16,13 +16,13 @@
         </ul>
     </div>
     @endif
-    <form action="{{ route('cita.crear') }}" method="post">
-        @csrf
+   
         <div class="row">
             <div class="col-md-8 order-md-1">
                 <h3 class="mt-5 mb-5">Agendar Cita</h3>
                 <h3 class=" ">Informacion del Cliente </h3>
-                <form id="formAgenda " class="needs-validation" novalidate="">
+                <form method="POST" action="{{ route('cita.crear') }}" >
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nombres">Nombres</label>
@@ -76,22 +76,21 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-md-6 mb-6">
-                                <label for="Identificador">Identificador</label>
+                                <label for="Identificador">fecha</label>
                                 <input type='datetime-fecha' class="form-control" placeholder="Seleccione la fecha"
                                     name="start" />
                             </div>
                             <div class="col-md-6 mb-6">
-                                <label for="nombre_mascota">Nombre</label>
+                                <label for="nombre_mascota">hora</label>
                                 <input type='datetime-hora' class="form-control" placeholder="Seleccione la hora"
-                                    name="start" />
+                                    name="hora" />
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <button type="submit" class=" posicion btn btn-success ">Agendar Cita</button>
                 </form>
             </div>
         </div>
-    </form>
 </div>
 
 <script>
