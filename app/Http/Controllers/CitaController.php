@@ -82,26 +82,8 @@ class CitaController extends Controller
      */
     public function show(Cita $cita)
     {
-        $citas= Cita::all();
-
-        $cita = [
-            "start" => $citas?->start.' '.$citas->hora,
-            "title" => $citas->title
-        ];
-
+        $cita= Cita::all();
         return response()->json($cita);
-    }
-
-    public function consultarCita(Cita $cita)
-    {
-        
-        $cita = Cita::with(
-            'clientes',
-            'mascotas',
-        )->get()
-        ->where("identificacion", $request->identificacion)
-        ->first();
-
     }
 
     /**
@@ -127,6 +109,4 @@ class CitaController extends Controller
     {
         //
     }
-
-
 }

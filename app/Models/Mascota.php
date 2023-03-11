@@ -17,6 +17,4 @@ class Mascota extends Model
     'tipo'  
     ];
 
-
-    
 }
